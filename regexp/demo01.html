@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>正则表达式</title>
 </head>
+
 <body>
-    
+    <script>
+        //比较一下两种书写()的位置
+
+        // var reg = /(\w{2})\1/
+        //     //abcd1dcba，\1引用了第一个分组
+        // var str = 'abab';
+        // console.log(reg.test(str)) //true
+        // console.log('RegExp.$1:', RegExp.$1)
+
+        var reg = /(\w){2}\1/
+            //abcd1dcba，\1引用了第一个分组
+
+        var str = 'abmm';
+        console.log(reg.test(str)) //true
+        console.log('RegExp.$1:', RegExp.$1);
+
+
+
+        // var reg = /(dog){2}\1/
+        // var str = 'dogdogdog';
+        // console.log(reg.test(str))
+        // console.log('RegExp.$1:', RegExp.$1)
+
+        //  var reg = /((dog){2})\1/
+        // var str = 'dogdogdogdog';
+        // console.log(reg.test(str))
+        // console.log('RegExp.$1:', RegExp.$1)
+    </script>
 </body>
+
 </html>
